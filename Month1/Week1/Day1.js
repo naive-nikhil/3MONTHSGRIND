@@ -73,3 +73,19 @@
 
 
 // LeetCode Question - 3
+const containsDuplicate = function (nums) {
+  const mySet = new Set();
+  let exist = false;
+  for (let i = 0; i < nums.length; i++) {
+    if (mySet.has(nums[i])) {
+      exist = mySet.has(nums[i]);
+      return exist;
+    }
+    mySet.add(nums[i]);
+  }
+  return exist;
+};
+
+const nums = [1, 2, 3, 1];
+
+console.log(containsDuplicate(nums));
