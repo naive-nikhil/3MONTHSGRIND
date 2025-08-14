@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <div id="leftBar"></div>
+        <div id="rightBar"></div>
+        <h1
+          style="
+            font-family: 'Federant', sans-serif;
+            padding: 10px;
+            border-bottom: 1px solid #1c202a;
+          "
+        >
+          Basics & Core Logic
+          <p
+            style="
+              font-size: 1rem;
+              font-weight: 400;
+              color: rgba(255, 255, 255, 0.6);
+            "
+          >
+            For syntax, loops, conditionals and basic problem-solving!
+          </p>
+        </h1>
+        <div id="q1">
+          <h3>Reverse String</h3>
+          <p>Enter any string below to reverse it in realtime!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              type="text"
+              autocomplete="off"
+              oninput="reverseString()"
+              id="input"
+              placeholder="Input"
+            />
+            <input type="text" readonly id="output" placeholder="Output" />
+          </div>
+        </div>
+
+        <div id="q2">
+          <h3>Check For Palindrome</h3>
+          <p>Enter any string to check wether it is palindrome or not!</p>
+          <div style="position: relative">
+            <input
+              type="text"
+              id="inputq2"
+              autocomplete="off"
+              oninput="isPalindrome()"
+              placeholder="Enter String"
+            />
+            <p id="outputq2" style="text-transform: uppercase"></p>
+          </div>
+        </div>
+
+        <div id="q2">
+          <h3>Find Factorial</h3>
+          <p>Enter any non negative number to find its factorial!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              autocomplete="off"
+              type="number"
+              min="0"
+              oninput="findFactorial()"
+              id="inputq3"
+              placeholder="Input"
+            />
+            <input type="number" readonly id="outputq3" placeholder="Output" />
+          </div>
+        </div>
+
+        <div id="q2">
+          <h3>Fibonacci Sequence</h3>
+          <p>Find `n` number of fibonacci sequence!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              autocomplete="off"
+              type="number"
+              min="0"
+              oninput="fibonacciSequence()"
+              id="inputq4"
+              placeholder="Input"
+            />
+            <input type="text" readonly id="outputq4" placeholder="Output" />
+          </div>
+        </div>
+
+        <div id="q2">
+          <h3>Vowels in a String</h3>
+          <p>Enter any string to find number of vowels!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              autocomplete="off"
+              type="text"
+              oninput="findVowels()"
+              id="inputq5"
+              placeholder="Input"
+            />
+            <input type="number" readonly id="outputq5" placeholder="Output" />
+          </div>
+        </div>
+
+        <h1
+          style="
+            font-family: 'Federant', sans-serif;
+            padding: 10px;
+            border-bottom: 1px solid #1c202a;
+          "
+        >
+          Arrays & Data Structures
+          <p
+            style="
+              font-size: 1rem;
+              font-weight: 400;
+              color: rgba(255, 255, 255, 0.6);
+            "
+          >
+            For loops, map(), filter(), reduce(), and sorting.!
+          </p>
+        </h1>
+
+        <div id="q2">
+          <h3>Largest Number in an Array</h3>
+          <p>Enter any array to find the largest number!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              autocomplete="off"
+              type="text"
+              oninput="findLargest()"
+              id="inputq6"
+              placeholder="Input - [ 1, 2, 2, 1 ]"
+            />
+            <input type="number" readonly id="outputq6" placeholder="Output" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

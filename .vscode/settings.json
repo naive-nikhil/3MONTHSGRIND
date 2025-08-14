@@ -1,4 +1,13 @@
 {
   "files.autoSave": "onFocusChange",
-  "files.autoSaveWhenNoErrors": true
+  "files.autoSaveWhenNoErrors": true,
+  "code-runner.runInTerminal": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "AEIOU",
+    "inputq",
+    "outputq"
+  ]
 }

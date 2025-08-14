@@ -73,19 +73,74 @@
 
 
 // LeetCode Question - 3
-const containsDuplicate = function (nums) {
-  const mySet = new Set();
-  let exist = false;
-  for (let i = 0; i < nums.length; i++) {
-    if (mySet.has(nums[i])) {
-      exist = mySet.has(nums[i]);
-      return exist;
-    }
-    mySet.add(nums[i]);
-  }
-  return exist;
-};
+// const containsDuplicate = function (nums) {
+//   const mySet = new Set();
+//   let exist = false;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (mySet.has(nums[i])) {
+//       exist = mySet.has(nums[i]);
+//       return exist;
+//     }
+//     mySet.add(nums[i]);
+//   }
+//   return exist;
+// };
 
-const nums = [1, 2, 3, 1];
+// const nums = [1, 2, 3, 1];
 
-console.log(containsDuplicate(nums));
+// console.log(containsDuplicate(nums));
+
+// Leetcode Question - 4
+// const maxSubArray = function (nums) {
+//   let sum = Number.MIN_VALUE;
+//   for (let i = 0; i < nums.length; i++){
+//     let currentArrSum = 0;
+//     for (let j = i; j < nums.length; j++){
+//       currentArrSum += nums[j]
+//       if (currentArrSum > sum) {
+//         sum = currentArrSum
+//       }
+//     }
+//   }
+//   return sum;
+// }
+
+// const nums = [0];
+// console.log(maxSubArray(nums));
+
+// Leetcode Question - 5
+// const runningSum = function (nums){
+//   const result = [];
+//   let sum = 0;
+//   for (let i=0; i<nums.length;i++){
+//     sum += nums[i];
+//     result.push(sum);
+//   }
+
+//   return result;
+// }
+
+// const nums = [1, 2, 3, 4];
+// console.log(runningSum(nums))
+
+// Leetcode Question - 6
+// const productExceptSelf = function(nums){
+//   const answer = [];
+
+//   let leftProduct = 1;
+//   for(let i=0; i<nums.length;i++){
+//     answer.push(leftProduct)
+//     leftProduct *= nums[i];
+//   }
+
+//   let rightProduct = 1;
+//   for(let i=nums.length-1;i>=0;i--){
+//     answer[i] *= rightProduct;
+//     rightProduct *= nums[i];
+//   }
+
+//   return answer;
+// }
+
+// const nums = [1,2,3,4];
+// console.log(productExceptSelf(nums));

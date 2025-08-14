@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Federant&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Zilla Slab", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #030712;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#container {
+  position: relative;
+  max-height: 80dvh;
+  height: 100%;
+  padding: 0 40px;
+  border: 1px solid #1c202a;
+  overflow: auto;
+}
+
+#leftBar,
+#rightBar {
+  position: absolute;
+  width: 40px;
+  height: 400%;
+  background-image: linear-gradient(
+    135deg,
+    #1c202a 7.14%,
+    #030712 7.14%,
+    #030712 50%,
+    #1c202a 50%,
+    #1c202a 57.14%,
+    #030712 57.14%,
+    #030712 100%
+  );
+  background-size: 9.9px 9.9px;
+}
+
+#leftBar {
+  border-right: 1px solid #1c202a;
+  top: 0;
+  left: 0;
+}
+
+#rightBar {
+  border-left: 1px solid #1c202a;
+  top: 0;
+  right: 0;
+}
+
+input {
+  border: 1px solid #1c202a;
+  background: rgba(255, 255, 255, 0.03);
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  font-family: "Zilla Slab", sans-serif;
+  font-size: 1.2rem;
+}
+
+#q1 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #1c202a;
+}
+
+#q1 h3,
+#q2 h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+#q1 p,
+#q2 p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-family: "Zilla Slab", sans-serif;
+}
+
+#q2 {
+  padding: 10px;
+  border-bottom: 1px solid #1c202a;
+}
+
+#q2 div p {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+}
