@@ -1,34 +1,20 @@
 function reverseString (){
-    const input = document.getElementById("input");
+    const input = document.getElementById("input").value;
     const output = document.getElementById("output");
 
-    let inputArray = [...input.value];
-
-    let reverseArray = [...inputArray];
-    for(let i=0; i<input.value.length;i++){
-        reverseArray[input.value.length-1-i] = input.value[i];
-    }
-
-    output.value = reverseArray.join("");
+    output.value = [...input].reverse().join("");
 }
 
 function isPalindrome (){
     const input = document.getElementById("inputq2").value.toLowerCase();
     const output = document.getElementById("outputq2");
 
-    let inputArray = [...input];
-
-    let reverseArray = [...inputArray];
-    for(let i=0; i<input.length;i++){
-        reverseArray[input.length-1-i] = input[i];
-    }
-
-    let palindrome = input === reverseArray.join("");
-    output.innerHTML = palindrome;
+    let reversed = [...input].reverse().join("");
+    output.innerHTML = input ? input === reversed : "";
 }
 
 function findFactorial() {
-    const input = document.getElementById("inputq3").value;
+    const input = parseInt(document.getElementById("inputq3").value);
     const output = document.getElementById("outputq3");
 
     let answer = 1;
@@ -37,22 +23,18 @@ function findFactorial() {
         answer *= i;
     }
 
-    output.value = answer;
+    output.value = input ? answer : "";
 }
 
 function fibonacciSequence() {
-    const input = document.getElementById("inputq4").value;
+    const n = parseInt(document.getElementById("inputq4").value);
     const output = document.getElementById("outputq4");
-
     let answer = [0,1];
-
-    for (let i = 2; i < input; i++){
+    for (let i = 2; i < n; i++){
         answer.push(answer[i - 2] + answer[i - 1]);
     }
 
-    console.log(answer);
-
-    output.value = answer.join(" ");
+    output.value = n <= 0 ? "" : n === 1 ? "0" : answer.slice(0, n).join(" ");
 }
 
 function findVowels() {
@@ -68,27 +50,37 @@ function findVowels() {
         }
     }
 
-    output.value = count;
+    output.value = input ? count : "";
 }
 
 function findLargest() {
-    const input = document.getElementById("inputq6").value;
+    const input = document.getElementById("inputq6").value.replace(/\s+/g, "");
     const output = document.getElementById("outputq6");
 
-    let count = 0;
-    const vowels = "aeiouAEIOU";
+    let largest = -Infinity;
 
-    for (let i = 0; i < input.length; i++){
-        if (vowels.includes(input[i])) {
-            count++;
+    const arr = input.split(",");
+
+    for (let i = 0; i < arr.length; i++){
+        if (parseInt(arr[i]) > largest) {
+            largest = parseInt(arr[i]);
         }
     }
 
-    let ss = [...input];
+    output.value = input ? largest : "";
+}
 
-    console.log(ss);
+function removeDuplicates() {
+    const input = document.getElementById("inputq7").value.replace(/\s+/g, "");
+    const output = document.getElementById("outputq7");
 
-    console.log(typeof (ss));
+     const arr = input.split(",").map(Number);
 
-    output.value = count;
+    const answer = [...new Set(arr)];
+
+    if (input) {
+    output.value = answer;    
+    } else {
+        output.value = "";
+    }
 }

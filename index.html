@@ -127,16 +127,31 @@
 
         <div id="q2">
           <h3>Largest Number in an Array</h3>
-          <p>Enter any array to find the largest number!</p>
+          <p>Enter numbers to find the largest number!</p>
           <div style="width: 100%; display: flex; gap: 8px">
             <input
               autocomplete="off"
               type="text"
               oninput="findLargest()"
               id="inputq6"
-              placeholder="Input - [ 1, 2, 2, 1 ]"
+              placeholder="Input - 1,2,2,1"
             />
             <input type="number" readonly id="outputq6" placeholder="Output" />
+          </div>
+        </div>
+
+        <div id="q2">
+          <h3>Remove Duplicates from an Array</h3>
+          <p>Enter numbers to remove duplicates!</p>
+          <div style="width: 100%; display: flex; gap: 8px">
+            <input
+              autocomplete="off"
+              type="text"
+              oninput="removeDuplicates()"
+              id="inputq7"
+              placeholder="Input - 1,2,2,1"
+            />
+            <input type="text" readonly id="outputq7" placeholder="Output" />
           </div>
         </div>
       </div>
