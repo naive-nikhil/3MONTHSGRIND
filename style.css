@@ -41,7 +41,7 @@ body {
 #rightBar {
   position: absolute;
   width: 40px;
-  height: 400%;
+  height: 128%;
   background-image: linear-gradient(
     135deg,
     #1c202a 7.14%,

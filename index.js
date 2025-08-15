@@ -84,3 +84,4 @@ function removeDuplicates() {
         output.value = "";
     }
 }
+
